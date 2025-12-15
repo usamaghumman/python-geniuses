@@ -51,13 +51,4 @@ async def main():
     # Make right turn with 2 motors
     await motor_pair.move_for_degrees(motor_pair.PAIR_1, 60, 100, velocity=normalSpeed)
 
-    # # Move the attachment
-    # for i in range(5):
-    #     await motor.run_to_absolute_position(port.D, attachmentStartingPosition - 80, fastSpeed)
-    #     await motor.run_to_absolute_position(port.D, attachmentStartingPosition, fastSpeed)
-
-    # # Move backward
-    # await motor_pair.move_for_degrees(motor_pair.PAIR_1, -250, 0, velocity=normalSpeed)
-    # motor_pair.stop(motor_pair.PAIR_1)
-
 runloop.run(main())
